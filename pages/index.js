@@ -1,65 +1,40 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import FileInput from "../components/FileInput";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Base64 file and image size calculator</title>
+        <meta
+          name="description"
+          content="How do I calculate a file size when it is Base64-encoded? What is Base64 encoding? WTF?"
+        />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main className="container max-w-prose mx-auto px-8 py-16">
+        <div className="prose">
+          <h1 className="text-3xl font-bold">Base64 WTF</h1>
+          <p>
+            Each Base64 digit represents exactly 6 bits of data. So, three
+            8-bits bytes of the input string/binary file (3×8 bits = 24 bits)
+            can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
+            &mdash;{" "}
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">
+              MDN
+            </a>
+          </p>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <h2>WTF? Calculate the Base64 file size for me.</h2>
         </div>
+
+        <FileInput />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+      <footer className="container max-w-prose mx-auto my-4 prose text-center border-top">
+        Created by <a href="https://twitter.com/sawyerh">@sawyerh</a>.{" "}
+        <a href="https://github.com/sawyerh/base64-wtf">Contribute</a>
       </footer>
-    </div>
-  )
+    </>
+  );
 }
