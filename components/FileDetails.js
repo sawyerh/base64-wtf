@@ -46,8 +46,6 @@ function FileDetails({ file }) {
     return `+${increase.toFixed(0)}%`;
   };
 
-  console.log(details);
-
   return (
     <article className="shadow-xl border bg-white p-6 my-6 rounded">
       {!details && <p className="animate-pulse">Reading file&hellip;</p>}
