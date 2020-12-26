@@ -10,6 +10,7 @@ export default function Home() {
           name="description"
           content="How do I calculate a file size when it is Base64-encoded? What is Base64 encoding? WTF?"
         />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 
       <main className="container max-w-prose mx-auto px-8 py-16">
