@@ -5,6 +5,11 @@ export default function Home() {
   return (
     <>
       <Head>
+        <script
+          src="https://cdn.usefathom.com/script.js"
+          data-site="FMRNZKZQ"
+          defer
+        ></script>
         <title>Base64 file and image size calculator</title>
         <meta
           name="description"
