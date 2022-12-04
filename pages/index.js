@@ -1,21 +1,25 @@
 import FileInput from "../components/FileInput";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <script
-          src="https://cdn.usefathom.com/script.js"
-          data-site="FMRNZKZQ"
-          defer
-        ></script>
         <title>Base64 file and image size calculator</title>
         <meta
           name="description"
           content="How do I calculate a file size when it is Base64-encoded? What is Base64 encoding? WTF?"
         />
         <link rel="shortcut icon" href="/favicon.png" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6ZV70S13CH"
+        ></Script>
+        <Script>{`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6ZV70S13CH');`}</Script>
       </Head>
 
       <main className="container max-w-prose mx-auto px-8 py-16">
